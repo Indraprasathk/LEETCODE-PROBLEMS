@@ -1,0 +1,8 @@
+class Solution(object):
+    def findSpecialInteger(self, arr):
+        percntage = len(arr) * 0.25 
+        unique_elements = list(set(arr))
+        for element in unique_elements:
+            count = arr.count(element)
+            if count > percntage:
+                return element
