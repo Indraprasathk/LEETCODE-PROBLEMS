@@ -1,0 +1,12 @@
+class Solution(object):
+    def destCity(self, paths):
+        destination = set()
+        source = set()
+        for path in paths:
+            source.add(path[0])
+            destination.add(path[1])
+        destination_city = destination - source
+        if len(destination_city) == 1:
+            return destination_city.pop()
+        else:
+            return None
